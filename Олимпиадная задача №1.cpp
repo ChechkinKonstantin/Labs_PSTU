@@ -1,38 +1,37 @@
 #include <iostream>
-#include <ctime>
+int compare(const void* a, const void* b)
+{
+	const int* x = (int*) a;
+	const int* y = (int*) b;
+
+	if (*x > *y)
+		return 1;
+	else if (*x < *y)
+		return -1;
+	return 0;
+}
+
 int main()
 {
-	std::srand(std::time(nullptr));
-	int num_of_attempts, range_of_numbers;
-	std::cout << "Enter number of attempts: ";
-	std::cin >> num_of_attempts;
-	std::cout << "Enter range of numbers: ";
-	std::cin >> range_of_numbers;
-	int hid_num = std::rand() % range_of_numbers + 1;
-	for (int i = 0; i < num_of_attempts; i++)
+	int num;
+	std::cout << "Enter your three digit number: ";
+	std::cin >> num;
+	int mas[]{num / 100, num % 100 / 10, num % 10};
+	std::qsort(mas, 3, sizeof(int), compare);
+	std::cout << "All possible permutation options: " << std::endl;
+	for (int i = 0; i < 3; i++)
 	{
-		int input;  
-		std::cout << "Enter your number: ";
-		std::cin >> input;
-		if (input != hid_num)
+		for (int j = 0; j < 3; j++)
 		{
-			if (input > hid_num)
+			for (int k = 0; k < 3; k++)
 			{
-				std::cout << "The hidden number is less than the entered one" << std::endl;
+				if (i != j && j != k && i != k)
+					std::cout << mas[i] * 100 + mas[j] * 10 + mas[k] << std::endl;
 			}
-			else
-			{
-				std::cout << "The hidden number is greater than the entered one" << std::endl;
-			}
-		}
-		else
-		{
-			std::cout << "Our congratulations, you're win!!!" << std::endl;
-			exit(0);
 		}
 	}
-	std::cout << "It's a pitty, you lose :(" << std::endl;
-	std::cout << "Hidden number was " << hid_num << std::endl;
+	int max = mas[2] * 100 + mas[1] * 10 + mas[0];
+	std::cout << "The maximum possible number = " << max;
 	return 0;
 }
 
