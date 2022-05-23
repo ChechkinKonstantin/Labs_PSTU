@@ -1,0 +1,45 @@
+﻿  Window.cpp
+c:\users\cecki\source\repos\sfmltest\window.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\cecki\source\repos\sfmltest\window.cpp(35): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(47): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\cecki\source\repos\sfmltest\window.cpp(59): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\cecki\source\repos\sfmltest\window.cpp(101): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(126): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(141): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(144): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(153): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(155): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+c:\users\cecki\source\repos\sfmltest\window.cpp(181): warning C4018: <: несоответствие типов со знаком и без знака
+  sfmltest.vcxproj -> C:\Users\cecki\source\repos\sfmltest\Debug\sfmltest.exe
